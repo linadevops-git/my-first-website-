@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <title> Cat Box </title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav class="main nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <div class="cat-head">
+            <img src="cute.jpg" alt="Cute kitten" class="cute-image"/>
+            <h2>Hello World</h2>
+            <p>I'm learning how to code - and i'm actually good at it.</p>
+            <p id="message">Click the first button for a surprise.</p>
+            <button id="changeTextBtn">Surprise Me</button>
+            <button id="goToYoutubeBtn">Go to Youtube</button>
+        </div>
+        <script>
+            document.getElementById('openPageBtn').addEventListener('click', function() {
+                window.open('https://www.youtube.com','_blank' );
+            });
+        </script>
+        <script>
+            const textBtn = document.getElementById('changeTextBtn');
+            const youtubeBtn = document.getElementById('goToYoutubeBtn');
+            const msg = document.getElementById('message');
+
+            textBtn.addEventListener('click', () => {
+                msg.textContent = 'tbarkellah 3la khouya!';
+                msg.style.color = 'deeppink';
+            });
+
+            youtubeBtn.addEventListener('click', () => {
+                window.open('https://www.youtube.com', '_blank');
+            });
+        </script>
+    </body>
+    </html>
